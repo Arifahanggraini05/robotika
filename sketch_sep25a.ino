@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 
 // ================== Konfigurasi WiFi AP ==================
-const char* AP_SSID = "KelompokDudung";   // Nama WiFi
-const char* AP_PASS = "Kelompok123";       // Password min 8 karakter
+const char* AP_SSID = "Kelompokd";   // Nama WiFi
+const char* AP_PASS = "12345678";       // Password min 8 karakter
 
 ESP8266WebServer server(80);
 
@@ -39,8 +39,8 @@ void handleRoot() {
     "<h1>Kontrol Robot Sumo</h1>"
     "<div class='grid'>"
     "  <div></div><div><a class='btn' href='/maju'>&uarr; Maju</a></div><div></div>"
-    "  <div><a class='btn' href='/kiri'>&larr; Kiri</a></div>"
     "  <div><a class='btn stop' href='/stop'>&#9632; Stop</a></div>"
+    "  <div><a class='btn' href='/kiri'>&larr; Kiri</a></div>"
     "  <div><a class='btn' href='/kanan'>Kanan &rarr;</a></div>"
     "  <div></div><div><a class='btn' href='/mundur'>&darr; Mundur</a></div><div></div>"
     "</div>"
@@ -112,26 +112,31 @@ void mundur(int speedL, int speedR) {
 }
 
 void belokKiri(int speedL, int speedR) {
+  // Motor kiri berhenti
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
   analogWrite(ENA, 0);
 
+  // Motor kanan maju
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
   analogWrite(ENB, speedR);
 }
 
 void belokKanan(int speedL, int speedR) {
+  // Motor kiri maju
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   analogWrite(ENA, speedL);
 
+  // Motor kanan berhenti
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
   analogWrite(ENB, 0);
 }
 
 void berhenti() {
+  // Pastikan semua pin off dan PWM 0
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
   analogWrite(ENA, 0);
