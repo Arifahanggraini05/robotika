@@ -18,8 +18,8 @@ Nyalakan driver dan motor dengan baterai/power pack terpisah. Pastikan untuk men
 
 Dari ponsel atau laptop, sambungkan ke jaringan Wi-Fi yang dipancarkan ESP32:
 
-- SSID: **KelompokDudung**
-- Password: **dudung123**
+- SSID: **Kelompokd**
+- Password: **12345678**
 
 ### 4. Akses Kontrol Web
 
