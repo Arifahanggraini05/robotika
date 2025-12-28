@@ -77,9 +77,7 @@ Jika membutuhkan versi dengan fitur tambahan, berikut varian yang dapat disiapka
 
 Hubungi developer untuk mendapatkan varian dengan fitur-fitur tersebut.
 
-[video praktek] (https://img.youtube.com/vi/EkphIeuPNHSyOdQl/0.jpg)]
-(https://youtu.be/3kOjfHViZuc?si=EkphIeuPNHSyOdQl)
-
+[![Video Praktek](https://img.youtube.com/vi/3kOjfHViZuc/0.jpg)](https://youtu.be/3kOjfHViZuc)
 ---
 
 © 2023 ESP32 Car Controller Project | Dokumentasi ini diperbarui terakhir pada 15 September 2023
